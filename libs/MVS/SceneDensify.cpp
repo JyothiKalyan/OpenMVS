@@ -1644,6 +1644,11 @@ bool Scene::DenseReconstruction(int nFusionMode)
 		// fuse depth-maps
 		data.depthMaps.FuseDepthMaps(pointcloud, OPTDENSE::nEstimateColors == 2, OPTDENSE::nEstimateNormals == 2);
 	}
+
+	//@@@Jyothi Change
+	system('//datasets//project//readdmapfile_final "//datasets//project//opensfm//undistorted//openmvs//depthmaps"  "//datasets//project//opensfm//undistorted//openmvs//depthmaps_csv"')
+
+
 	#if TD_VERBOSE != TD_VERBOSE_OFF
 	if (g_nVerbosityLevel > 2) {
 		// print number of points with 3+ views
